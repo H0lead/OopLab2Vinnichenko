@@ -1,4 +1,5 @@
-﻿  Lab2.cpp
-D:\instruments\VisualStudioProjects\OOP\Lab2\Lab2\Lab2.cpp(32,20): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\instruments\VisualStudioProjects\OOP\Lab2\Lab2\Lab2.cpp(36,22): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  money.cpp
+D:\instruments\VisualStudioProjects\OOP\Lab2\Lab2\money.cpp(101,30): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+D:\instruments\VisualStudioProjects\OOP\Lab2\Lab2\money.cpp(118,41): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+D:\instruments\VisualStudioProjects\OOP\Lab2\Lab2\money.cpp(122,34): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
   Lab2.vcxproj -> D:\instruments\VisualStudioProjects\OOP\Lab2\x64\Debug\Lab2.exe

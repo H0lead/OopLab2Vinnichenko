@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+//Метод ініціалізації в коді
 money money::init(long a, unsigned char b)
 {
     money tmp;
@@ -12,6 +13,7 @@ money money::init(long a, unsigned char b)
     return tmp;
 }
 
+//Метод ініціалізації користувачем
 void money::read()
 {
     cout << "Grn: ";
@@ -23,6 +25,7 @@ void money::read()
     cout << endl;
 }
 
+//Виведення змінних на екран
 void money::display()
 {
     if ((int)coin < 10)
@@ -35,6 +38,7 @@ void money::display()
     }
 }
 
+//Переведення змінних в string формат
 string money::tostring()
 {
     string tmp;
@@ -49,6 +53,7 @@ string money::tostring()
     return tmp;
 }
 
+//Додавання гривень та копійок до вже існуючих
 money money::add(long a, unsigned char b)
 {
     money tmp;
@@ -57,6 +62,7 @@ money money::add(long a, unsigned char b)
     return tmp;
 }
 
+//Віднімання гривень та копійок від вже існуючих
 money money::sub(long a, unsigned char b)
 {
     money tmp;
@@ -68,37 +74,42 @@ money money::sub(long a, unsigned char b)
     }
     else
     {
-        tmp.grn -= 1;
         tmp.coin = (int)coin - (int)b;
     }
     return tmp;
 }
 
+//Ділення суми на число
 money money::divide(int a)
 {
     money tmp;
     float b = (float)grn / (float)a;
-    tmp.grn = b;
+    tmp.grn = (int)b;
     float fractionalPart = (b - (int)b)*100;
     tmp.coin = (int)coin / a + (int)fractionalPart;
     return tmp;
 }
 
+//Ділення суми на число з комою
 money money::dividefloat(float a)
 {
     money tmp;
     float b = (float)grn / (float)a;
-    tmp.grn = b;
+    tmp.grn = (int)b;
+    //Знаходження залишка в копійках після ділення гривень
     float fractionalPart = (b - (int)b)*100;
     tmp.coin = (int)coin / a + (int)fractionalPart;
     return tmp;
 }
 
+//Множення на число з комою
 money money::multiplyfloat(float a)
 {
     money tmp;
     float b = (float)grn * a;
-    tmp.grn = b;
+    //В grn записується ціле число після множення
+    tmp.grn = (int)b;
+    //Знаходження залишка в копійках після множення гривень
     float fractionalPart = (b - (int)b) * 100;
     if ((int)coin * a + fractionalPart > 100)
     {
@@ -113,6 +124,7 @@ money money::multiplyfloat(float a)
     return tmp;
 }
 
+//Порівняння суми з іншою
 void money::compare(money a)
 {
     if (grn == a.grn)
